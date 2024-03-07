@@ -30,6 +30,8 @@ def get_db():
 def generate_uuid():
     return str(uuid4())
 
+def generate_uuid():
+    return str(uuid4())
 
 # def reset_database(db_url):
 #     engine = create_engine(db_url, echo=True)
@@ -37,5 +39,5 @@ def generate_uuid():
 #     Base.metadata.create_all(bind=engine)
 
 
-if __name__ == "__main__":
-    reset_database(URL)
+# if __name__ == "__main__":
+#     reset_database(URL)
