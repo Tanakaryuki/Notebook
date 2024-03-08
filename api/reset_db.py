@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine
 from api.models.book import Base
+from api.models.word import Base
 import os
 
 # HOST=os.environ["HOST"]
