@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, DateTime, func
 from api.db import Base, generate_uuid
 
 class Word(Base):
-    __tablename__ = "words"
+    __tablename__ = "Words"
     
     id = Column(String, primary_key=True, default=generate_uuid)
     book_id = Column(String, nullable=False)

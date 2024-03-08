@@ -1,13 +1,13 @@
-from sqlalchemy import Column, String,Datetime, func
+from sqlalchemy import Column, String,DateTime, func
 from api.db import Base, generate_uuid
 
 class Book(Base):
-    __tablename__ = "books"
+    __tablename__ = "Books"
     
-    id = Column(String, primary_key=True, default=generate_uuid)
-    title = Column(String, nullable=False)
-    author = Column(String, nullable=False)
-    year = Column(String, nullable=False)
-    genre = Column(String, nullable=False)
-    created_at = Column(Datetime, nullable=False,default=func.now())
-    updated_at = Column(Datetime, onupdate=func.now())
+    id = Column(String(255), primary_key=True, default=generate_uuid)
+    title = Column(String(255), nullable=False)
+    author = Column(String(255), nullable=False)
+    date = Column(String(255), nullable=False)
+    genre = Column(String(255), nullable=False)
+    created_at = Column(DateTime, nullable=False,default=func.now())
+    updated_at = Column(DateTime, onupdate=func.now())
